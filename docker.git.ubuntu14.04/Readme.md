@@ -13,13 +13,12 @@ times with either of these commands:
 
 ## Copy public/private key pairs used with git
 
-The Vagrantfile will copy the keys from the ./shell/ folder into the ~/.ssh/ folder on the VM
-and make the necessary permissions and ownership changes.  However, you need to copy
-your keys that are used on GitHub into the ./shell/ folder.  For example, here are the
-commands to copy the default public/private keys into the ./shell/ folder:
+Once vagrant is up and running, you should check it to see if you can ssh to it:
+    ```
+    vagrant ssh
+    ```
 
-```
-  cp ~/.ssh/id_rsa ./shell/id_rsa
-  cp ~/.ssh/id_rsa.pub ./shell/id_rsa.pub 
-```
-
+If this works, then use the ./copy_keys.sh to scp the key pair you want git to use inside your instance
+    ```
+    ./copy_keys.sh ~/.ssh/id_rsa*
+    ```
