@@ -22,3 +22,6 @@ If this works, then use the ./copy_keys.sh to scp the key pair you want git to u
     ```
     ./copy_keys.sh ~/.ssh/id_rsa*
     ```
+
+This will scp your RSA keys to the vagrant instance and copy them to /home/vagrant/.ssh/git.id_rsa.pub and git.id_rsa
+It also chmods them to rw--.
